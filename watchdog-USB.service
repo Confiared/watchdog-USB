@@ -1,0 +1,14 @@
+[Unit]
+Description=Watchdog USB
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/local/bin/watchdog-USB
+
+[Install]
+WantedBy=multi-user.target
